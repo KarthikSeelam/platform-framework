@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ican.cortex.platform.security.security.config.SecurityConfig
