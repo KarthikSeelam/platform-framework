@@ -35,6 +35,7 @@
 		<module>platform-camel-kafka</module>
 		<module>platform-vault</module>
 		<module>platform-utilities</module>
+		<module>platform-nhcx</module>
 	</modules>
 	<properties>
 		<java.version>17</java.version>
