@@ -1,0 +1,259 @@
+Iassure/src/main/java/
+├── UserDetailsDTO/
+│   ├── OrganizationDetailsDTO.java
+│   └── UserWorkProfileMappingDTO.java
+└── com/
+    └── iassure/
+        ├── IassureApplication.java
+        ├── config/
+        │   ├── PowerBIConfig.java
+        │   ├── S3Cofig.java
+        │   ├── SecurityConfig.java
+        │   └── SwaggerConfig.java
+        ├── constants/
+        │   ├── AppConstants.java
+        │   └── IncidentStatus.java
+        ├── controller/
+        │   └── CommonUtilController.java
+        ├── dto/
+        │   ├── UserDetailsDTO.java
+        │   └── UserProfileResponse.java
+        ├── entity/
+        │   ├── DesignationDetails.java
+        │   ├── OrganizationDetails.java
+        │   ├── UserDetails.java
+        │   ├── UserTitleTypeMaster.java
+        │   ├── UserTypeMaster.java
+        │   └── UserWorkProfileMapping.java
+        ├── exception/
+        │   ├── AppException.java
+        │   ├── BadRequestException.java
+        │   └── ResourceNotFoundException.java
+        ├── incident/
+        │   ├── controller/
+        │   │   ├── IncidentController.java
+        │   │   └── PowerBIController.java
+        │   ├── dao/
+        │   │   ├── IncidentActionLogDAO.java
+        │   │   ├── IncidentActionLogDAOImpl.java
+        │   │   ├── IncidentCorrectiveActionPlanDAO.java
+        │   │   ├── IncidentCorrectiveActionPlanDAOImpl.java
+        │   │   ├── IncidentsDAO.java
+        │   │   └── IncidentsDAOImpl.java
+        │   ├── dto/
+        │   │   ├── CorrectiveActionPlan.java
+        │   │   ├── DocumentDTO.java
+        │   │   ├── FieldSubmissionRequest.java
+        │   │   ├── IncidentActionLogDTO.java
+        │   │   ├── IncidentCorrectiveActionPlanDTO.java
+        │   │   ├── IncidentFieldsDTO.java
+        │   │   ├── IncidentsDTO.java
+        │   │   ├── MastersDTO.java
+        │   │   ├── PreventiveActionDTO.java
+        │   │   ├── RepositoryDTO.java
+        │   │   ├── RequestBodyDTO.java
+        │   │   ├── RequestCAPTask.java
+        │   │   ├── RequestChatDto.java
+        │   │   ├── RequestDocument.java
+        │   │   ├── RequestFields.java
+        │   │   ├── RequestIncidentAssign.java
+        │   │   ├── RequestIncidentDetailsById.java
+        │   │   ├── RequestIncidentInterim.java
+        │   │   ├── RequestMasterSource.java
+        │   │   ├── RequestTaskMaster.java
+        │   │   ├── RootCauseAnalysis.java
+        │   │   ├── RootCauseWhy.java
+        │   │   ├── SplitIndex.java
+        │   │   ├── SplitPDFRequest.java
+        │   │   └── SupplierDTO.java
+        │   ├── entity/
+        │   │   ├── CAPTaskMaster.java
+        │   │   ├── CorrectiveActionPlanMaster.java
+        │   │   ├── Department.java
+        │   │   ├── Document.java
+        │   │   ├── DocumentEntity.java
+        │   │   ├── Fields.java
+        │   │   ├── GetCapTask.java
+        │   │   ├── GetIncidentAssign.java
+        │   │   ├── GetIncidentChatDetails.java
+        │   │   ├── GetIncidentRootCause.java
+        │   │   ├── GetPreventiveActionDetails.java
+        │   │   ├── IncidentActionLogResolutionDetails.java
+        │   │   ├── IncidentAssign.java
+        │   │   ├── IncidentCaseTypeMaster.java
+        │   │   ├── IncidentChat.java
+        │   │   ├── IncidentCorrectiveActionPlan.java
+        │   │   ├── IncidentCount.java
+        │   │   ├── IncidentDashboard.java
+        │   │   ├── IncidentDetailsById.java
+        │   │   ├── IncidentField.java
+        │   │   ├── IncidentHistory.java
+        │   │   ├── IncidentInterim.java
+        │   │   ├── IncidentNotification.java
+        │   │   ├── IncidentPreventiveAction.java
+        │   │   ├── IncidentResolutionTypeMaster.java
+        │   │   ├── IncidentRootCause.java
+        │   │   ├── Incidents.java
+        │   │   ├── MasterSource.java
+        │   │   ├── Notification.java
+        │   │   ├── NotificationUserDetails.java
+        │   │   ├── ProblemRootCause.java
+        │   │   ├── RepositoryEntity.java
+        │   │   ├── Supplier.java
+        │   │   ├── TaskMaster.java
+        │   │   ├── Users.java
+        │   │   └── UsersByDepartment.java
+        │   ├── mapper/
+        │   │   └── IncidentsRowMapper.java
+        │   ├── repository/
+        │   │   ├── CAPTaskRepository.java
+        │   │   ├── CorrectiveActionPlanMasterRepository.java
+        │   │   ├── DepartmentRepo.java
+        │   │   ├── DocumentRepository.java
+        │   │   ├── FetchUsersRepo.java
+        │   │   ├── FieldsRepository.java
+        │   │   ├── GetCapTaskRepo.java
+        │   │   ├── GetEmployeeAndManagerRepo.java
+        │   │   ├── GetIncidentAssignRepository.java
+        │   │   ├── GetIncidentChatRepo.java
+        │   │   ├── GetIncidentRootCauseRepo.java
+        │   │   ├── GetPreventiveActionRepo.java
+        │   │   ├── IncidentAssignRepository.java
+        │   │   ├── IncidentCaseTypeMasterRepository.java
+        │   │   ├── IncidentChatRepository.java
+        │   │   ├── IncidentCountRepo.java
+        │   │   ├── IncidentDashboardRepo.java
+        │   │   ├── IncidentDetailsByIdRepo.java
+        │   │   ├── IncidentDetailsRepository.java
+        │   │   ├── IncidentFieldRepo.java
+        │   │   ├── IncidentHistoryRepo.java
+        │   │   ├── IncidentInterimRepo.java
+        │   │   ├── IncidentNotificationRepo.java
+        │   │   ├── IncidentResolutionTypeMasterRepository.java
+        │   │   ├── IncidentRootCauseRepository.java
+        │   │   ├── MasterSourceRepository.java
+        │   │   ├── NotificationRepository.java
+        │   │   ├── NotificationUserDetailsRepository.java
+        │   │   ├── PreventiveActionRepository.java
+        │   │   ├── ProblemRootCauseRepository.java
+        │   │   ├── RepositoryRepository.java
+        │   │   ├── StorageRepository.java
+        │   │   ├── SupplierRepository.java
+        │   │   ├── TaskMasterRepository.java
+        │   │   └── UserDepartmentRepo.java
+        │   ├── response/
+        │   │   ├── AddIncidentResponse.java
+        │   │   ├── AddMasterSourceResponse.java
+        │   │   ├── CorrectiveActionResponse.java
+        │   │   ├── FetchTaskResponse.java
+        │   │   ├── FieldsResponse.java
+        │   │   ├── GetCapDetailsResponse.java
+        │   │   ├── GetHistoryResponse.java
+        │   │   ├── GetIncidentAssignResponse.java
+        │   │   ├── GetIncidentTasksResponse.java
+        │   │   ├── GetPreventiveActionResponse.java
+        │   │   ├── GetRootCauseResponse.java
+        │   │   ├── GetTasksResponse.java
+        │   │   ├── IncidentAssignResponse.java
+        │   │   ├── IncidentByIdResponse.java
+        │   │   ├── IncidentChatResponse.java
+        │   │   ├── IncidentCountResponse.java
+        │   │   ├── IncidentDetailsDashboardResponse.java
+        │   │   ├── MasterSourceResponse.java
+        │   │   ├── NotificationResponse.java
+        │   │   ├── PreventiveActionResponse.java
+        │   │   ├── RootCauseResponse.java
+        │   │   ├── SaveInterimResponse.java
+        │   │   ├── StatusResponse.java
+        │   │   └── TaskMasterResponse.java
+        │   └── service/
+        │       ├── EmbeddingService.java
+        │       ├── FileSplit.java
+        │       ├── FileUploadService.java
+        │       ├── IncidentService.java
+        │       ├── IncidentServiceImpl.java
+        │       ├── PowerBIService.java
+        │       ├── QdrantService.java
+        │       ├── SearchService.java
+        │       ├── StorageService.java
+        │       └── StorageServiceImpl.java
+        ├── payload/
+        │   ├── JwtAuthenticationResponse.java
+        │   ├── LoginRequest.java
+        │   ├── SignUpRequest.java
+        │   ├── UserIdentityAvailability.java
+        │   └── UserSummary.java
+        ├── repositary/
+        │   ├── DesignationDetailsRepository.java
+        │   ├── OrganizationDetailsRepository.java
+        │   ├── UserDetailsRepository.java
+        │   ├── UserTitleTypeMasterRepository.java
+        │   ├── UserTypeMasterRepository.java
+        │   └── UserWorkProfileMappingRepository.java
+        ├── security/
+        │   ├── CurrentUser.java
+        │   ├── CustomUserDetailsService.java
+        │   ├── JwtAuthenticationEntryPoint.java
+        │   ├── JwtAuthenticationFilter.java
+        │   ├── JwtTokenProvider.java
+        │   └── UserPrincipal.java
+        ├── service/
+        │   ├── OrganizationService.java
+        │   └── OrganizationServiceImpl.java
+        ├── user/
+        │   ├── dto/
+        │   │   ├── DesignationDTO.java
+        │   │   ├── OrganizationDTO.java
+        │   │   ├── PasswordDTO.java
+        │   │   ├── Role.java
+        │   │   ├── RoleName.java
+        │   │   ├── StatusMasterDTO.java
+        │   │   ├── User.java
+        │   │   ├── UserProfileDTO.java
+        │   │   ├── UserRoleDTO.java
+        │   │   ├── UserTitleTypeMasterDTO.java
+        │   │   ├── UserTypeDTO.java
+        │   │   └── UserWorkProfileDTO.java
+        │   ├── mapper/
+        │   │   ├── RoleRowMapper.java
+        │   │   ├── UserProfileRowMapper.java
+        │   │   └── UserRowMapper.java
+        │   └── service/
+        │       ├── UserService.java
+        │       └── UserServiceImpl.java
+        ├── usermanagement/
+        │   ├── controller/
+        │   │   └── UserController.java
+        │   ├── dto/
+        │   │   ├── RequestCreateUserDTO.java
+        │   │   ├── RequestDepartment.java
+        │   │   └── RequestLogin.java
+        │   ├── entity/
+        │   │   ├── DepartmentUserMapping.java
+        │   │   ├── UserDetailsById.java
+        │   │   ├── UserLogin.java
+        │   │   ├── UserTypes.java
+        │   │   └── UsersEntity.java
+        │   ├── repository/
+        │   │   ├── DepartmentUserRepository.java
+        │   │   ├── UserDetailsByIdRepo.java
+        │   │   ├── UserLoginRepo.java
+        │   │   ├── UserTypesRepository.java
+        │   │   └── UsersRepository.java
+        │   ├── response/
+        │   │   ├── CreateUserResponse.java
+        │   │   ├── GetAllUsersResponse.java
+        │   │   ├── GetUserByIdResponse.java
+        │   │   └── LoginResponse.java
+        │   └── service/
+        │       ├── UserManagementService.java
+        │       └── UserManagementServiceImpl.java
+        └── util/
+            ├── ConnectionKeepAliveTask.java
+            ├── DateUtil.java
+            ├── EmailUtil.java
+            ├── EncryptDecrypt.java
+            ├── GeneratePasswordUtil.java
+            ├── OpenAIUtil.java
+            ├── PdfUtil.java
+            └── ReportUtil.java
